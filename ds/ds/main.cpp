@@ -18,12 +18,14 @@ using namespace std;
 // 建立一个空表 + 数组
 // 应用什么场景
 // 为什么
-typedef struct shunxubiao *Listlcr ;// 这个放在哪里 定义的是别名 定义了之后就用别名
+typedef struct shunxubiao * Listlcr ;// 这个放在哪里 定义的是别名 定义了之后就用别名
 struct shunxubiao{
     int data[MaxSize];//这是c里面的数组吗 c++需要注意什么 又别的用法吗 vector特性在哪里 填不满数据放哪里
     int lastindex;// c 和c++中结构一样的吗
 };// 这里是在定义一个新的数据类型还是 定义一个这种数据类型的新变量
 //Listlcr Pt; 定义一个结构体指针变量
+
+//关于指针的操作
 
 // 初始化 创建一个空表
 Listlcr MakeEmpty(){
@@ -120,7 +122,7 @@ void printfTable(Listlcr ptrl){
     printf("\n");
 }
 
-int main(int argc, const char * argv[]) {
+int main2(int argc, const char * argv[]) {
     Listlcr Ptt;
     // 创建一个新表 然后不断的通过软件
     Ptt = MakeEmpty();//函数 的调用；
@@ -146,6 +148,6 @@ int main(int argc, const char * argv[]) {
     //printfbiao(Ptt);
     //Ptt = addt(3,7,Ptt);//
     //printfbiao(Ptt);
-
+    return 0;
     
 }
