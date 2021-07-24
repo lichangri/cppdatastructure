@@ -15,6 +15,7 @@
 // 建立一个空表 + 数组
 // 应用什么场景
 // 为什么
+// TODO 所有的struct定义 大写字母开头， 所有的变量和函数名小写字母开头。
 typedef struct shunxubiao *Listlcr ;
 struct shunxubiao{
     int data[MaxSize];//这是c里面的数组吗 c++需要注意什么 又别的用法吗 vector特性在哪里 填不满数据放哪里
@@ -22,6 +23,9 @@ struct shunxubiao{
 }ll;// 这里是在定义一个新的数据类型还是 定义一个这种数据类型的新变量
 
 // 表的增加元素 第i个位置增加元素 num
+
+// TODO struct shunxubiao *Listlcr 这是什么? Listlcr作为一个变量名，不应该和自己定义的shunxubiao的别名重复
+// TODO 既然定义了顺序表的指针别名，入参就是Listlcr类型，返回也是Listlcr类型。 两者不要混用
 struct shunxubiao addt(int i,int num,struct shunxubiao *Listlcr){
     if(Listlcr->lastindex == MaxSize){
         printf("顺序表已经满了");
@@ -83,6 +87,7 @@ struct shunxubiao deletev(int i,struct shunxubiao *Listlcr){
     for(int j = i-1;j<Listlcr->lastindex-2;j++){
         Listlcr->data[j] = Listlcr->data[j+1];
     }
+    // TODO 越删除越大嘛
     Listlcr->lastindex = Listlcr->lastindex+1;
     return *Listlcr;
     
