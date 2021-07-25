@@ -14,7 +14,7 @@
 typedef struct StackLcr *stackList ;
 struct StackLcr{
     int Data[MaxSize] ;
-    int lastIndex;//the last index of the list, warning the array begin with 0;
+    int lastIndex;//the last index of the list, warning the array begin with 0; 这个也是栈顶元素
 };//claim a new array-based stack list data type
 
 stackList makeEmpty(){
@@ -26,7 +26,7 @@ stackList makeEmpty(){
 }
 
 // to insert value num to the ith place of the list
-// 这一段没有任何意义 但是相对之前写的有提高 所以保留
+// 这一段没有任何意义，没有遵从栈顶出入的原则  但是相对之前顺序表写的有提高 所以保留
 stackList insertv(int i,int num, stackList node){
 
     if(i<0 || i > node -> lastIndex + 2){
@@ -67,6 +67,7 @@ stackList  deletev(int i, stackList node){
     printf("\n");
     return node;
 }
+
 // to find ith from this list
 int findi(int i, stackList node){
     if(i<0 || i > node -> lastIndex+1){
@@ -84,7 +85,8 @@ void pushs(int num, stackList node){
     }
     else{
         node->lastIndex++;
-        node->Data[node->lastIndex] = num;
+        node->Data[node->lastIndex] = num;//这里是栈顶入
+        //打印
         for(int j = 0;j<=node->lastIndex;j++){
             printf("%d ",node->Data[j]);
         }
@@ -101,11 +103,12 @@ int pop(stackList node){
     }
     else{
         node->lastIndex--;
+        //打印
         for(int j = 0;j<=node->lastIndex;j++){
             printf("%d ",node->Data[j]);
         }
         printf("\n");
-       return node->Data[node->lastIndex];
+       return node->Data[node->lastIndex];//栈顶出
         
     }
 }
