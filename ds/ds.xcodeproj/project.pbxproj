@@ -8,8 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9A6CC62026A9CFEF005FE9C7 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A6CC61F26A9CFEF005FE9C7 /* main.cpp */; };
-		9A76479626AC4743002FB1FE /* point.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A76479426AC4743002FB1FE /* point.cpp */; };
-		9A76479826AC5C4E002FB1FE /* llist.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A76479726AC5C4E002FB1FE /* llist.cpp */; };
+		9A76479A26AD40BE002FB1FE /* stackwitharray.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9A76479926AD40BE002FB1FE /* stackwitharray.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -27,8 +26,7 @@
 /* Begin PBXFileReference section */
 		9A6CC61C26A9CFEF005FE9C7 /* ds */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ds; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A6CC61F26A9CFEF005FE9C7 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		9A76479426AC4743002FB1FE /* point.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = point.cpp; sourceTree = "<group>"; };
-		9A76479726AC5C4E002FB1FE /* llist.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = llist.cpp; sourceTree = "<group>"; };
+		9A76479926AD40BE002FB1FE /* stackwitharray.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = stackwitharray.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,8 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				9A6CC61F26A9CFEF005FE9C7 /* main.cpp */,
-				9A76479426AC4743002FB1FE /* point.cpp */,
-				9A76479726AC5C4E002FB1FE /* llist.cpp */,
+				9A76479926AD40BE002FB1FE /* stackwitharray.cpp */,
 			);
 			path = ds;
 			sourceTree = "<group>";
@@ -124,8 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A76479626AC4743002FB1FE /* point.cpp in Sources */,
-				9A76479826AC5C4E002FB1FE /* llist.cpp in Sources */,
+				9A76479A26AD40BE002FB1FE /* stackwitharray.cpp in Sources */,
 				9A6CC62026A9CFEF005FE9C7 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

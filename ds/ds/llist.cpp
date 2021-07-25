@@ -18,7 +18,7 @@ struct LinkedList{
 };
 
 // initialize a blank linkedlist
-llist makeempty(){
+llist makeEmpty(){
     //create an node memeory for it
     llist p = (llist)malloc(sizeof(struct LinkedList));
     p->pnext = NULL;
@@ -46,7 +46,7 @@ llist findi(int index, llist lpt){
     int llength = callengt(pt);//calculate the value the input parameter.
     if(index < 1 || index > llength){
         printf("there is no %d th value in this linked list",index);
-        return pt;//？？ in this situation， which value should i back?
+        return NULL;//？？ in this situation， which value should i back?
     }
     if(pt->pnext == NULL){
         printf("This is a blank linked list");
@@ -89,7 +89,7 @@ llist findv(int num, llist lpt){
 
 //insert num in ith of the linked list；
 llist insertvi(int num , int i,llist ptl){
-    llist pt = makeempty();
+    llist pt = makeEmpty();
     // if the input llist ptrl is empty
     if(i == 1){
         pt->data = num;
@@ -97,12 +97,12 @@ llist insertvi(int num , int i,llist ptl){
         return pt;
     }
     int llength = callengt(ptl);
-    if(i < 1 || i > llength){
+    if(i < 1 || i > llength+1){
         printf("there is no %d th value in this linked list",i);
         return ptl;//？？ in this situation， which value should i back?
     }
 
-    llist ptemp = makeempty();
+    llist ptemp = makeEmpty();
     pt = findi(i-1,ptl);//imagein the insert need a tempvalue to avoid loss the adress of followingg node
     ptemp->pnext = pt->pnext;
     pt->pnext = ptemp;
@@ -121,14 +121,14 @@ llist deletv(int i,llist ptl){
         printf("This is a blank linked list");
         return ptl;
     }
-    llist pt = makeempty();
+    llist pt = makeEmpty();
     if(i == 1){
         pt = ptl;
         ptl = ptl->pnext;
         free(pt);
         return ptl;
     }
-    llist ptemp = makeempty();
+    llist ptemp = makeEmpty();
     pt = findi(i-1,ptl);//imagein the insert need a tempvalue to avoid loss the adress of followingg node
     ptemp = pt->pnext;
     pt->pnext = ptemp->pnext;
@@ -148,8 +148,8 @@ void printfTab(llist ptrl){
    // return 0;
 }
 
-int main(void){
-    llist plist = makeempty();// define a new llist variavble
+int main5(void){
+    llist plist = makeEmpty();// define a new llist variavble
     callengt(plist);
     plist = insertvi(1 ,1,plist);
     callengt(plist);
@@ -160,10 +160,9 @@ int main(void){
     plist = insertvi(3 ,1,plist);
     callengt(plist);
     printfTab(plist);
-    plist = insertvi(2 ,2,plist);
+    plist = insertvi(2 ,4,plist);
     callengt(plist);
     printfTab(plist);
-    plist = findi(1, plist);
 
     plist = deletv(1,plist);
     callengt(plist);
@@ -172,7 +171,7 @@ int main(void){
     callengt(plist);
     printfTab(plist);
     
-    llist plist1 = findv(1, plist);//返回值会修改 初始地址 一定要注意
-    llist plist2 = findi(1, plist);//返回值会修改 初始地址 一定要注意
-
+   // llist plist1 = findv(1, plist);//返回值会修改 初始地址 一定要注意
+    //llist plist2 = findi(1, plist);//返回值会修改 初始地址 一定要注意
+    return NULL;
 }

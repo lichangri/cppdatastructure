@@ -38,6 +38,8 @@ Listlcr MakeEmpty(){
 
 // 表的增加元素 第i个位置增加元素 num
 // *号怎么用
+// 栈加元素只能加后面
+//删除也只能从后面删除
 Listlcr addt(int i,int num,Listlcr ptrl){
     if(ptrl->lastindex == MaxSize-1){
         printf("顺序表已经满了");
@@ -50,7 +52,7 @@ Listlcr addt(int i,int num,Listlcr ptrl){
         return ptrl;
     }
 
-    if(i < 0||i> ptrl->lastindex+1){
+    if(i < 0||i> ptrl->lastindex+1){//这里可以变成➕2 就不需要考虑空表插入了
         printf("输入位置错误");
         return ptrl;
     }
